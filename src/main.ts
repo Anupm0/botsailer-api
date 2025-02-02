@@ -29,7 +29,7 @@ const fastify = Fastify({
 });
 export const tmdbApi = process.env.TMDB_KEY && process.env.TMDB_KEY;
 (async () => {
-  const PORT = Number(process.env.PORT) || 3000;
+  const PORT = Number(process.env.PORT) || 3002;
 
 
 
@@ -160,7 +160,7 @@ export const tmdbApi = process.env.TMDB_KEY && process.env.TMDB_KEY;
       });
     });
 
-    fastify.listen({ port: PORT, host: '0.0.0.0' }, (e, address) => {
+    fastify.listen({ port: 3002, host: '127.0.0.1' }, (e, address) => {
       if (e) throw e;
       console.log(`server listening on ${address}`);
     });
