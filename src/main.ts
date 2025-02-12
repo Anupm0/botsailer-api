@@ -11,7 +11,7 @@ fastify.register(cors, {
 fastify.get('/', async (_, reply) => {
   try {
     reply.status(200).send(
-      `Welcome to consumet api! 🎉 \n${process.env.NODE_ENV === 'DEMO' ? 'This is a demo of the api. You should only use this for testing purposes.' : ''}`
+      `Welcome2 to consumet api! 🎉 \n${process.env.NODE_ENV === 'DEMO' ? 'This is a demo of the api. You should only use this for testing purposes.' : ''}`
     );
   } catch (error) {
     reply.status(500).send('Internal Server Error');
